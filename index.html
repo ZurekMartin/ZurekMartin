@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="cs" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Martin Žůrek</title>
+
+        <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+        <link rel="preconnect" href="https://cdn.simpleicons.org" crossorigin />
+        <link rel="dns-prefetch" href="https://cdn.simpleicons.org" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = { theme: { extend: {} } };
+        </script>
+
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body
+        class="min-h-screen bg-[#071018] text-zinc-200"
+        style="
+            --tech-icon-size: 64px;
+            --tech-padding: 12px;
+            --tech-tile-size: calc(
+                var(--tech-icon-size) + 2 * var(--tech-padding)
+            );
+            --grid-unit: calc(var(--tech-tile-size) * 2.25);
+            --grid-gap: 16px;
+        "
+    >
+        <header
+            class="fixed top-4 z-50 left-1/2 w-full max-w-4xl transform -translate-x-1/2"
+        >
+            <div class="flex items-center justify-center gap-4 relative">
+                <div
+                    class="desktop-pill backdrop-blur-xs border border-white/10 ring-1 ring-white/5 shadow-lg rounded-full px-6 py-3 bg-black/20"
+                >
+                    <nav aria-label="Hlavní navigace" class="hidden md:block">
+                        <ul
+                            id="desktop-nav"
+                            class="flex items-center gap-6 text-gray-200 text-sm sm:text-base"
+                        >
+                            <li>
+                                <a
+                                    href="#hero"
+                                    class="nav-link hover:text-white/80 transition-all duration-200"
+                                    data-section="hero"
+                                    >Úvod</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#about"
+                                    class="nav-link hover:text-white/80 transition-all duration-200"
+                                    data-section="about"
+                                    >O mně</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#education"
+                                    class="nav-link hover:text-white/80 transition-all duration-200"
+                                    data-section="education"
+                                    >Vzdělání</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#experience"
+                                    class="nav-link hover:text-white/80 transition-all duration-200"
+                                    data-section="experience"
+                                    >Praxe</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#projects"
+                                    class="nav-link hover:text-white/80 transition-all duration-200"
+                                    data-section="projects"
+                                    >Projekty</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile-button-container md:hidden" id="mobile-container">
+            <div
+                id="menu-btn"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                class="backdrop-blur-xs border border-white/10 ring-1 ring-white/5 shadow-lg rounded-full p-3 bg-black/20 text-white"
+            >
+                <svg
+                    id="icon-menu"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                </svg>
+
+                <button
+                    id="panel-close"
+                    class="overlay-close"
+                    aria-label="Zavřít menu"
+                >
+                    <svg
+                        id="icon-close"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                </button>
+
+                <div class="panel-content" aria-hidden="true">
+                    <nav class="overlay-nav" aria-label="Mobilní navigace">
+                        <ul
+                            class="flex flex-col gap-2 text-gray-200 text-sm px-6 py-6"
+                        >
+                            <li>
+                                <a
+                                    href="#hero"
+                                    class="nav-link text-center block hover:text-white/80 transition-all duration-200"
+                                    data-section="hero"
+                                    >Úvod</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#about"
+                                    class="nav-link text-center block hover:text-white/80 transition-all duration-200"
+                                    data-section="about"
+                                    >O mně</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#education"
+                                    class="nav-link text-center block hover:text-white/80 transition-all duration-200"
+                                    data-section="education"
+                                    >Vzdělání</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#experience"
+                                    class="nav-link text-center block hover:text-white/80 transition-all duration-200"
+                                    data-section="experience"
+                                    >Praxe</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#projects"
+                                    class="nav-link text-center block hover:text-white/80 transition-all duration-200"
+                                    data-section="projects"
+                                    >Projekty</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <section
+            id="hero"
+            class="min-h-screen flex items-center justify-center relative overflow-hidden text-white hero-bg"
+        >
+            <div class="text-left px-4 max-w-5xl mx-auto relative z-10">
+                <h1 class="mb-6 leading-tight">
+                    <span
+                        class="block text-2xl md:text-3xl font-medium text-zinc-300 mb-2"
+                        >Ahoj, jmenuji se</span
+                    >
+                    <span
+                        class="block text-5xl md:text-7xl font-extrabold hero-name"
+                        >Martin Žůrek</span
+                    >
+                </h1>
+
+                <p
+                    class="text-lg md:text-xl text-zinc-200 mb-8 max-w-3xl mx-auto"
+                >
+                    Jsem studentem kybernetické bezpečnosti, zajímající se o
+                    aplikovanou kryptologii a zabezpečení informací na fyzické i
+                    digitální úrovni.
+                </p>
+            </div>
+
+            <div
+                class="absolute inset-0 z-0 hero-overlay pointer-events-none"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                id="hero-hint"
+                class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center text-zinc-300 transition-opacity duration-100 z-10"
+            >
+                <p>
+                    Další projekt v přípravě<span
+                        class="text-yellow-500 text-sm ml-2"
+                        >●</span
+                    >
+                </p>
+            </div>
+        </section>
+
+        <main class="px-4 py-8 max-w-5xl mx-auto">
+            <section id="about" class="py-16 scroll-mt-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">
+                    O mně
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-semibold mb-4 text-center">
+                            Jak trávím volný čas
+                        </h3>
+                        <p class="text-zinc-400 mb-4 text-justify">
+                            Ve volném čase se rád věnuji počítačovému hardwaru a
+                            softwaru. Mezi mé největší koníčky patří home
+                            labbing, díky kterému mohu experimentovat s novými
+                            technologiemi a zároveň si rozšiřovat praktické
+                            zkušenosti. Právě zde vzniká většina mých projektů,
+                            které postupně dokumentuji a zveřejňuji na
+                            <a
+                                href="https://github.com/ZurekMartin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition-colors"
+                            >
+                                GitHubu </a
+                            >.
+                        </p>
+                        <p class="text-zinc-400 mb-4 text-justify">
+                            Během svého předchozího studia jsem objevil kouzlo
+                            aplikované kryptologie, což mě přivedlo ke
+                            kybernetické bezpečnosti jako mé specializaci v
+                            navazujícím studiu. Ve své bakalářské práci na téma
+                            „Analýza vlivu vnějších podmínek na vlastnosti
+                            optických vláken a návrh aplikace pro optimální
+                            instalaci“ jsem se věnoval hlubšímu zkoumání
+                            vlastností přenosových médií. V diplomové práci se
+                            nyní zaměřuji na téma „Identifikace bezdrátových
+                            zařízení pomocí radiofrekvenčních otisků“, kde bych
+                            rád zúročil své dosavadní znalosti a navrhl
+                            zabezpečený systém odolný vůči replay útokům.
+                        </p>
+                        <p class="text-zinc-400 mb-4 text-justify">
+                            Kromě samotného programování mě baví mobilní
+                            fotografie spojená s procházkami městem i přírodou.
+                            Čas strávený venku mi pomáhá urovnat si myšlenky,
+                            načerpat novou a čerstvou inspiraci a zachytit
+                            jedinečné okamžiky, na které během svých toulek
+                            narazím.
+                        </p>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-semibold mb-4 text-center">
+                            Výběr technologií se kterými pracuji
+                        </h3>
+
+                        <div
+                            id="logos-grid"
+                            class="grid grid-cols-4 gap-4"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                id="education-mobile"
+                class="py-16 scroll-mt-8 block md:hidden"
+            >
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">
+                    Vzdělání
+                </h2>
+                <div>
+                    <div id="timeline-container-mobile" class="relative">
+                        <div
+                            id="timeline-line-mobile"
+                            class="absolute left-[64px] transform -translate-x-1/2 flex flex-col items-center pointer-events-none z-0"
+                            style="top: 0; height: 100%"
+                        >
+                            <div
+                                class="w-px flex-1 timeline-gradient mx-auto"
+                            ></div>
+                        </div>
+
+                        <div
+                            id="timeline-marker-mobile"
+                            class="absolute w-4 h-4 pointer-events-none z-50"
+                            style="
+                                left: 64px;
+                                transform: translateX(-50%) translateY(0px);
+                            "
+                        >
+                            <div
+                                id="timeline-marker-inner-mobile"
+                                class="w-full h-full rounded-full bg-blue-400 shadow-2xl ring-2 ring-blue-900/25"
+                            ></div>
+                        </div>
+
+                        <div id="timeline-items-mobile" class="space-y-8"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="py-16 scroll-mt-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">
+                    Vzdělání
+                </h2>
+                <div>
+                    <div id="timeline-container" class="relative">
+                        <div
+                            id="timeline-line"
+                            class="absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center pointer-events-none z-0"
+                            style="top: 0; height: 100%"
+                        >
+                            <div
+                                class="w-px flex-1 timeline-gradient mx-auto"
+                            ></div>
+                        </div>
+
+                        <div
+                            id="timeline-marker"
+                            class="absolute w-4 h-4 pointer-events-none z-50"
+                            style="
+                                left: 50%;
+                                transform: translateX(-50%) translateY(0px);
+                            "
+                        >
+                            <div
+                                id="timeline-marker-inner"
+                                class="w-full h-full rounded-full bg-blue-400 shadow-2xl ring-2 ring-blue-900/25"
+                            ></div>
+                        </div>
+
+                        <div id="timeline-items" class="space-y-8"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="py-16 scroll-mt-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">
+                    Praxe
+                </h2>
+
+                <div id="experience-items" class="space-y-8"></div>
+            </section>
+
+            <section id="projects" class="py-16 scroll-mt-8">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">
+                    Projekty
+                </h2>
+
+                <div
+                    class="flex justify-center items-start"
+                    style="padding-top: 2rem; padding-bottom: 2rem"
+                >
+                    <div
+                        id="bento-grid"
+                        class="bg-transparent max-w-5xl w-full"
+                        style="display: grid; gap: 16px"
+                    ></div>
+                </div>
+
+                <h3
+                    class="text-2xl font-semibold text-white mb-4 mt-6 text-center"
+                >
+                    Klienti, kteří mi svěřili své projekty
+                </h3>
+
+                <div
+                    id="other-projects"
+                    class="mt-2 flex gap-4 justify-center items-center flex-wrap"
+                ></div>
+            </section>
+        </main>
+
+        <footer
+            class="border-t border-white/10 bg-black/20 text-zinc-200 py-6 mt-16"
+        >
+            <div
+                class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-0"
+            >
+                <div class="text-center sm:text-left space-y-1 py-0 sm:py-0">
+                    <p class="text-sm text-zinc-400">
+                        © <span id="footer-year"></span>
+                        <a
+                            href="https://github.com/ZurekMartin"
+                            class="hover:text-white/80 transition-colors duration-200"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Martin Žůrek
+                        </a>
+                    </p>
+                    <p class="text-xs text-zinc-500">
+                        Made with <span aria-hidden>♥</span>
+                    </p>
+                </div>
+
+                <nav class="hidden md:flex space-x-6 text-sm">
+                    <a href="#hero" class="hover:text-white/80">Domů</a>
+                    <a href="#about" class="hover:text-white/80">O mně</a>
+                    <a href="#education" class="hover:text-white/80"
+                        >Vzdělání</a
+                    >
+                    <a href="#experience" class="hover:text-white/80">Praxe</a>
+                    <a href="#projects" class="hover:text-white/80">Projekty</a>
+                </nav>
+
+                <div class="text-center sm:text-right space-y-1 py-0 sm:py-0">
+                    <div
+                        class="flex justify-center sm:justify-end items-center"
+                    >
+                        <a
+                            id="footer-email"
+                            href="mailto:zurek.martin.1@icloud.com?subject=Spolupr%C3%A1ce%20%2F%20Dotaz"
+                            class="text-sm text-zinc-400 hover:text-white/80 transition-colors duration-200"
+                        >
+                            zurek.martin.1@icloud.com
+                        </a>
+                    </div>
+                    <p class="text-xs text-zinc-500 hidden md:block">
+                        Klikněte pro otevření mail klienta
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js" defer></script>
+    </body>
+</html>
