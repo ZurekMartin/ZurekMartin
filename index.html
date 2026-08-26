@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="cs" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Martin Žůrek — Portfolio</title>
+        <meta name="description" content="Student kybernetické bezpečnosti, aplikované kryptologie a vývojář." />
+        <meta name="author" content="Martin Žůrek" />
+        <meta name="theme-color" content="#071018" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zurekmartin.cz/" />
+        <link rel="icon" href="https://zurekmartin.cz/assets/logos/zurekmartin_logo.png" type="image/png" />
+
+        <meta property="og:title" content="Martin Žůrek — Portfolio" />
+        <meta property="og:description" content="Student kybernetické bezpečnosti, aplikované kryptologie a vývojář." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zurekmartin.cz/" />
+        <meta property="og:image" content="https://zurekmartin.cz/assets/logos/zurekmartin_logo.png" />
+        <meta property="og:locale" content="cs_CZ" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Martin Žůrek — Portfolio" />
+        <meta name="twitter:description" content="Student kybernetické bezpečnosti, aplikované kryptologie a vývojář." />
+        <meta name="twitter:image" content="https://zurekmartin.cz/assets/logos/zurekmartin_logo.png" />
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';" />
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Martin Žůrek",
+            "url": "https://zurekmartin.cz/",
+            "image": "https://zurekmartin.cz/assets/logos/zurekmartin_logo.png",
+            "jobTitle": "Student kybernetické bezpečnosti & Vývojář",
+            "sameAs": [
+                "https://github.com/ZurekMartin"
+            ]
+        }
+        </script>
+
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body class="min-h-screen bg-[#071018] text-zinc-200 antialiased selection:bg-blue-500 selection:text-white">
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg">
+            Přeskočit na obsah
+        </a>
+
+        <header class="fixed top-4 z-50 left-1/2 w-full max-w-4xl transform -translate-x-1/2">
+            <div class="flex items-center justify-center gap-4 relative">
+                <div class="desktop-pill backdrop-blur-xs border border-white/10 ring-1 ring-white/5 shadow-lg rounded-full px-6 py-3 bg-black/20">
+                    <nav aria-label="Hlavní navigace" class="hidden md:block">
+                        <ul id="desktop-nav" class="flex items-center gap-6 text-gray-200 text-sm sm:text-base">
+                            <li><a href="#hero" class="nav-link hover:text-white/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-1" data-section="hero" aria-label="Přejít na úvodní sekci">Úvod</a></li>
+                            <li><a href="#about" class="nav-link hover:text-white/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-1" data-section="about" aria-label="Přejít na sekci O mně">O mně</a></li>
+                            <li><a href="#experience" class="nav-link hover:text-white/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-1" data-section="experience" aria-label="Přejít na sekci Zkušenosti">Zkušenosti</a></li>
+                            <li><a href="#projects" class="nav-link hover:text-white/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-1" data-section="projects" aria-label="Přejít na sekci Projekty">Projekty</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile-button-container md:hidden" id="mobile-container">
+            <div id="menu-btn" role="button" tabindex="0" aria-expanded="false" aria-label="Otevřít hlavní navigaci" class="backdrop-blur-xs border border-white/10 ring-1 ring-white/5 shadow-lg rounded-full p-3 bg-black/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+
+                <button id="panel-close" class="overlay-close" aria-label="Zavřít menu">
+                    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+                <div class="panel-content" aria-hidden="true">
+                    <nav class="overlay-nav" aria-label="Mobilní navigace">
+                        <ul class="flex flex-col gap-2 text-gray-200 text-xl px-6 py-6">
+                            <li><a href="#hero" class="nav-link text-center block hover:text-white/80 transition-all duration-200" data-section="hero" aria-label="Přejít na úvodní sekci">Úvod</a></li>
+                            <li><a href="#about" class="nav-link text-center block hover:text-white/80 transition-all duration-200" data-section="about" aria-label="Přejít na sekci O mně">O mně</a></li>
+                            <li><a href="#experience" class="nav-link text-center block hover:text-white/80 transition-all duration-200" data-section="experience" aria-label="Přejít na sekci Zkušenosti">Zkušenosti</a></li>
+                            <li><a href="#projects" class="nav-link text-center block hover:text-white/80 transition-all duration-200" data-section="projects" aria-label="Přejít na sekci Projekty">Projekty</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <section id="hero" class="min-h-screen flex items-center justify-center relative text-white hero-bg" aria-label="Úvodní představení">
+            <div id="hero-content" class="text-left px-4 max-w-5xl mx-auto relative z-10"></div>
+
+            <div id="hero-hint" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center text-zinc-300 transition-opacity duration-100 z-10 pointer-events-none">
+                <p>Další projekt v přípravě<span class="text-yellow-500 text-sm ml-2" aria-hidden="true">●</span></p>
+            </div>
+        </section>
+
+        <main id="main-content" class="px-4 py-8 max-w-5xl mx-auto">
+            <section id="about" class="py-16 scroll-mt-20" aria-labelledby="about-heading">
+                <h2 id="about-heading" class="text-3xl font-bold text-white mb-8 text-center">O mně</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <article class="text-center md:text-left">
+                        <h3 id="about-subheading" class="text-xl font-semibold mb-4 text-center"></h3>
+                        <div id="about-paragraphs"></div>
+                    </article>
+
+                    <article class="text-center md:text-left">
+                        <h3 id="tech-subheading" class="text-xl font-semibold mb-4 text-center"></h3>
+                        <div id="logos-grid" class="grid grid-cols-4 gap-4" aria-label="Mřížka používaných technologií"></div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="experience" class="py-16 scroll-mt-20" aria-labelledby="experience-heading">
+                <h2 id="experience-heading" class="text-3xl font-bold text-white mb-8 text-center">Zkušenosti</h2>
+                <div class="experience-container" id="experience-container">
+                    <div class="experience-info-wrapper">
+                        <button type="button" class="experience-info-trigger" aria-label="Nápověda k sekci zkušeností" aria-describedby="experience-tooltip-text" tabindex="0">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                        </button>
+                        <div id="experience-tooltip-text" class="experience-info-tooltip" role="tooltip">
+                            Kliknutím na položku zobrazíte více info.
+                        </div>
+                    </div>
+                    <svg class="experience-svg" id="experience-svg" aria-hidden="true"></svg>
+                    <div class="experience-nodes" id="experience-nodes"></div>
+                </div>
+            </section>
+
+            <section id="projects" class="py-16 scroll-mt-20" aria-labelledby="proj-heading">
+                <h2 id="proj-heading" class="text-3xl font-bold text-white mb-8 text-center">Projekty</h2>
+                <div class="flex justify-center items-start pb-8">
+                    <div id="bento-grid" class="bg-transparent max-w-5xl w-full grid gap-4" aria-label="Přehled vybraných projektů"></div>
+                </div>
+
+                <h3 id="clients-heading" class="text-2xl font-semibold text-white mb-4 mt-6 text-center"></h3>
+                <div id="other-projects" class="mt-2 flex gap-4 justify-center items-center flex-wrap" aria-label="Logo klienti a spolupráce"></div>
+            </section>
+
+            <p class="hidden md:block text-center text-[12px] text-zinc-500/50 mb-8 select-none tracking-wider" aria-hidden="true">
+                PS: Kdo hledá, najde... (&gt;_)
+            </p>
+        </main>
+
+        <footer class="border-t border-white/10 bg-black/20 text-zinc-200 py-6">
+            <div class="max-w-5xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-1 md:gap-0">
+                <div class="flex flex-col-reverse md:flex-col text-center md:text-left gap-1 md:gap-0 md:space-y-1 py-0 md:py-0">
+                    <p class="text-sm text-zinc-400 mt-1 md:mt-0">
+                        © <span id="footer-year"></span>
+                        <a id="footer-author-link" href="#" class="hover:text-white/80 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" target="_blank" rel="noopener noreferrer"></a>
+                    </p>
+                    <p id="footer-location" class="text-xs text-zinc-500"></p>
+                </div>
+
+                <nav class="hidden md:flex space-x-6 text-sm" aria-label="Navigace v patičce">
+                    <a href="#hero" class="hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Domů">Domů</a>
+                    <a href="#about" class="hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="O mně">O mně</a>
+                    <a href="#experience" class="hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Zkušenosti">Zkušenosti</a>
+                    <a href="#projects" class="hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Projekty">Projekty</a>
+                </nav>
+
+                <div class="text-center md:text-right space-y-1 py-0 md:py-0">
+                    <div class="flex justify-center md:justify-end items-center">
+                        <a id="footer-email" href="#" class="text-sm text-zinc-400 hover:text-white/80 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"></a>
+                    </div>
+                    <p class="text-xs text-zinc-500 hidden md:block">Klikněte pro zkopírování e-mailu</p>
+                </div>
+            </div>
+
+            <div id="copy-toast" class="copy-toast hidden" role="status" aria-live="polite"></div>
+        </footer>
+    </body>
+</html>

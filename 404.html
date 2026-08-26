@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="cs" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Martin Žůrek — Stránka nenalezena</title>
+        <meta name="description" content="Požadovaná stránka neexistuje." />
+        <meta name="author" content="Martin Žůrek" />
+        <meta name="theme-color" content="#071018" />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://zurekmartin.cz/404.html" />
+        <link rel="icon" href="https://zurekmartin.cz/assets/logos/zurekmartin_logo.png" type="image/png" />
+
+        <meta property="og:title" content="404 — Stránka nenalezena" />
+        <meta property="og:description" content="Požadovaná stránka neexistuje." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zurekmartin.cz/404.html" />
+        <meta property="og:image" content="https://zurekmartin.cz/assets/logos/zurekmartin_logo.png" />
+        <meta property="og:locale" content="cs_CZ" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="404 — Stránka nenalezena" />
+        <meta name="twitter:description" content="Požadovaná stránka neexistuje." />
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';" />
+
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body class="min-h-screen bg-[#071018] text-zinc-200 flex flex-col justify-between antialiased selection:bg-blue-500 selection:text-white">
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg">
+            Přeskočit na obsah
+        </a>
+
+        <header class="fixed top-4 z-50 left-1/2 w-full max-w-4xl transform -translate-x-1/2">
+            <div class="flex items-center justify-center gap-4 relative">
+                <div class="desktop-pill backdrop-blur-xs border border-white/10 ring-1 ring-white/5 shadow-lg rounded-full px-6 py-3 bg-black/20">
+                    <nav aria-label="Hlavní navigace" class="hidden md:block">
+                        <ul id="desktop-nav" class="flex items-center gap-6 text-gray-200 text-sm sm:text-base">
+                            <li><a href="index.html#hero" class="nav-link hover:text-white/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-1" data-section="hero" aria-label="Přejít na úvodní sekci">Úvod</a></li>
+                            <li><a href="index.html#about" class="nav-link hover:text-white/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-1" data-section="about" aria-label="Přejít na sekci O mně">O mně</a></li>
+                            <li><a href="index.html#experience" class="nav-link hover:text-white/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-1" data-section="experience" aria-label="Přejít na sekci Zkušenosti">Zkušenosti</a></li>
+                            <li><a href="index.html#projects" class="nav-link hover:text-white/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded px-1" data-section="projects" aria-label="Přejít na sekci Projekty">Projekty</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile-button-container md:hidden" id="mobile-container">
+            <div id="menu-btn" role="button" tabindex="0" aria-expanded="false" aria-label="Otevřít hlavní navigaci" class="backdrop-blur-xs border border-white/10 ring-1 ring-white/5 shadow-lg rounded-full p-3 bg-black/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                </svg>
+
+                <button id="panel-close" class="overlay-close" aria-label="Zavřít menu">
+                    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+                <div class="panel-content" aria-hidden="true">
+                    <nav class="overlay-nav" aria-label="Mobilní navigace">
+                        <ul class="flex flex-col gap-2 text-gray-200 text-xl px-6 py-6">
+                            <li><a href="index.html#hero" class="nav-link text-center block hover:text-white/80 transition-all duration-200" data-section="hero" aria-label="Přejít na úvodní sekci">Úvod</a></li>
+                            <li><a href="index.html#about" class="nav-link text-center block hover:text-white/80 transition-all duration-200" data-section="about" aria-label="Přejít na sekci O mně">O mně</a></li>
+                            <li><a href="index.html#experience" class="nav-link text-center block hover:text-white/80 transition-all duration-200" data-section="experience" aria-label="Přejít na sekci Zkušenosti">Zkušenosti</a></li>
+                            <li><a href="index.html#projects" class="nav-link text-center block hover:text-white/80 transition-all duration-200" data-section="projects" aria-label="Přejít na sekci Projekty">Projekty</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <main id="main-content" class="flex-1 flex items-center justify-center px-4 pt-32 pb-16 relative hero-bg">
+            <div class="text-center max-w-2xl mx-auto z-10 flex flex-col items-center">
+                <p class="text-blue-400 font-mono text-xl md:text-2xl font-semibold mb-2">404 — PAGE NOT FOUND</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold hero-name mb-6 md:mb-8">Tady nic není</h1>
+
+                <p class="hidden md:block text-zinc-400 text-sm md:text-base leading-relaxed pl-4 py-1 italic mb-2">
+                    Ale když už jsi tady... věděl jsi, že heslo k <code class="text-blue-300 font-mono bg-blue-950/60 px-1.5 py-0.5 rounded">sudo</code> v místním terminálu je <span class="text-white font-mono font-bold">Password123</span>?
+                </p>
+
+                <p class="hidden md:block text-zinc-400 text-sm md:text-base leading-relaxed pl-4 py-1 italic mb-8">
+                    Konami Code pro otevření terminálu: ↑ ↑ ↓ ↓ ← → ← → B A
+                </p>
+
+                <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-500 hover:bg-blue-400 text-slate-950 font-bold transition-all duration-200 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Zpět na hlavní stránku portfolia">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Zpět na hlavní stránku
+                </a>
+            </div>
+        </main>
+
+        <footer class="border-t border-white/10 bg-black/20 text-zinc-200 py-6">
+            <div class="max-w-5xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-1 md:gap-0">
+                <div class="flex flex-col-reverse md:flex-col text-center md:text-left gap-1 md:gap-0 md:space-y-1 py-0 md:py-0">
+                    <p class="text-sm text-zinc-400 mt-1 md:mt-0">
+                        © <span id="footer-year"></span>
+                        <a href="https://github.com/ZurekMartin" class="hover:text-white/80 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" target="_blank" rel="noopener noreferrer" aria-label="GitHub profil Martina Žůrka (otevře se na nové záložce)">
+                            Martin Žůrek
+                        </a>
+                    </p>
+                    <p class="text-xs text-zinc-500">Vytvořeno s <span aria-hidden="true">♥</span> ve Zlíně</p>
+                </div>
+
+                <nav class="hidden md:flex space-x-6 text-sm" aria-label="Navigace v patičce">
+                    <a href="index.html#hero" class="hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Domů">Domů</a>
+                    <a href="index.html#about" class="hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="O mně">O mně</a>
+                    <a href="index.html#experience" class="hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Zkušenosti">Zkušenosti</a>
+                    <a href="index.html#projects" class="hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Projekty">Projekty</a>
+                </nav>
+
+                <div class="text-center md:text-right space-y-1 py-0 md:py-0">
+                    <div class="flex justify-center md:justify-end items-center">
+                        <a id="footer-email" href="mailto:zurek.martin.1@icloud.com" class="text-sm text-zinc-400 hover:text-white/80 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Kopírovat e-mailovou adresu zurek.martin.1@icloud.com">
+                            zurek.martin.1@icloud.com
+                        </a>
+                    </div>
+                    <p class="text-xs text-zinc-500 hidden md:block">Klikněte pro zkopírování e-mailu</p>
+                </div>
+            </div>
+
+            <div id="copy-toast" class="copy-toast hidden" role="status" aria-live="polite"></div>
+        </footer>
+    </body>
+</html>
