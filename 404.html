@@ -22,7 +22,7 @@
         <meta name="twitter:title" content="404 — Stránka nenalezena" />
         <meta name="twitter:description" content="Požadovaná stránka neexistuje." />
 
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';" />
 
         <link rel="stylesheet" href="styles.css" />
         <script src="script.js" defer></script>
@@ -48,13 +48,15 @@
         </header>
 
         <div class="mobile-button-container md:hidden" id="mobile-container">
-            <div id="menu-btn" role="button" tabindex="0" aria-expanded="false" aria-label="Otevřít hlavní navigaci" class="backdrop-blur-xs border border-white/10 ring-1 ring-white/5 shadow-lg rounded-full p-3 bg-black/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
-                <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-                </svg>
+            <div id="menu-btn" class="backdrop-blur-xs border border-white/10 ring-1 ring-white/5 shadow-lg rounded-full p-3 bg-black/20 text-white">
+                <button type="button" id="icon-menu" class="mobile-menu-trigger focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-full" aria-expanded="false" aria-label="Otevřít hlavní navigaci">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                    </svg>
+                </button>
 
-                <button id="panel-close" class="overlay-close" aria-label="Zavřít menu">
-                    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <button type="button" id="panel-close" class="overlay-close focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Zavřít menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                     </svg>
                 </button>
